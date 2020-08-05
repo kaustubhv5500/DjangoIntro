@@ -1,0 +1,54 @@
+﻿-> django-admin startproject 'projectname'
+->python manage.py startapp 'appname'
+-> add app to list of installed apps
+
+
+1) Create ORM models after recognizing all the database parameters
+2) Migrate
+3) Generate views and templates using HTML
+4) Change Settings for templates in settings.py
+5) Inherit from base html file to app specific templates
+6) Imp : Had to convert context object into dict and had to remove the default path of extends tag of html to make it run properly
+7) Generate views which are python executables in views.py
+8) RegEx in url mapping : (?P<slug>[\w\-]+) : Named group of python regex patterns ie.slug
+9) return render(request,file,context_dict) : context_dict is just a normal dictionary
+
+-> <script src="{% static "js/jquery.js" %}"></script>   : Include Javascript
+-> <link rel="stylesheet" href="{% static "css/base.css" %}" />   : Include CSS template
+
+-> Django ORM features 
+• ForeignKey, a field type that allows us to create a one-to-many relationship;
+• OneToOneField, a field type that allows us to define a strict one-to-one relationship; and
+• ManyToManyField, a field type which allows us to define a many-to-many relationship.
+
+-> python manage.py migrate
+-> python manage.py makemigrations <appname>
+-> python manage.py migrate  : To finalize changes
+
+-> After creating objectin shell always use object.save()
+
+-> python manage.py createsuperuser
+
+->verbose_name_plural -> change plural name of a class under class Meta
+
+-> class PageAdmin(admin.ModelAdmin):  #Change the admin views
+
+---->   <input type = "submit" name = "submit" value = "Create Category"/> : To create an input button
+
+--> {% csrf_token %}. This is a Cross-Site Request Forgery (CSRF) token, which helps to protect and secure the HTTP POST action 
+--> that is initiated on the subsequent submission of a form.
+
+-> app_name = 'appname' in urls.py
+
+--> {% user_form as_p %} : : as_p template : : This wraps each element in the form in a paragraph (denoted by the <p> HTML tag). This ensures that each
+element appears on a new line.
+
+--> set_test_cookie(), test_cookie_worked() and delete_test_cookie(). : cookie testing functions in django 
+
+-> registration.backends.simple.urls : Account login
+
+
+-> {{form|as_bootstrap}}
+
+-> git remote add master https://github.com/kaustubhv5500/courseagg.git
+-> git push -u origin master

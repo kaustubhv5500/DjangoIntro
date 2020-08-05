@@ -1,0 +1,31 @@
+{% extends 'rango/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+
+
+{% block title_block %}
+<head>
+    About
+</head>
+{% endblock %}
+{% block body_block %}
+<div>
+    <body>
+        <p>
+            Coded By Kaustubh V. in March 2020
+        </p>
+
+        <img src ="{% static "images/about.png" %}" alt = "About"/>
+       
+        <button class="btn btn-primary"
+        onClick="alert('You clicked the button using JavaScript.');">
+        Click Me - I run JavaScript
+        </button>
+
+        <button class="btn btn-primary" id="about-btn">
+            Click Me - I'm JavaScript on Speed</button>
+            <p>This is a example</p>
+            <p>This is another example</p>
+    </body>
+</div>
+{% endblock %}
